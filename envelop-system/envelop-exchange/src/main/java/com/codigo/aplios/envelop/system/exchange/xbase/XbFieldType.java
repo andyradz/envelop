@@ -6,6 +6,7 @@
 package com.codigo.aplios.envelop.system.exchange.xbase;
 
 /**
+ * Struktura odpowiada za utrzymywanie konfiguracji dostępnych typów danych występująych w standardzie XBase.
  *
  * @author Izabela Radziszewska
  */
@@ -56,8 +57,19 @@ public enum XbFieldType implements
 	return this;
     }
 
+    /*
+     Atrybut struktury odpowiada za kod przypisany do typu pola.
+     */
     private char fldCode;
+
+    /*
+     Atrybut struktury odpowiada za długość pola typu danych.
+     */
     private int fldLength;
+
+    /*
+     Atrybut struktury odpowiada za długość po przecinku pola typu danych.
+     */
     private int fldDecimal;
 
 }
