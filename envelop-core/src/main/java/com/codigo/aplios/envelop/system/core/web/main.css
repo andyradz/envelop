@@ -1,0 +1,549 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: 'ProximaNovaRgBold';
+	src: url('ProximaNova-Bold-webfont.eot');
+	src: url('ProximaNova-Bold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/ProximaNova-Bold-webfont.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold-webfont.ttf') format('truetype'),
+		url('../../fonts/ProximaNova-Bold-webfont.svg#ProximaNovaRgBold')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNovaRgRegular';
+	src: url('ProximaNova-Reg-webfont.eot');
+	src: url('ProximaNova-Reg-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+		url('../../fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+		url('../../fonts/ProximaNova-Reg-webfont.svg#ProximaNovaRgRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNovaLtSemibold';
+	src: url('../../fonts/ProximaNova-Sbold-webfont.eot');
+	src: url('../../fonts/ProximaNova-Sbold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/ProximaNova-Sbold-webfont.woff') format('woff'),
+		url('../../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype'),
+		url('../../fonts/ProximaNova-Sbold-webfont.svg#ProximaNovaLtSemibold')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('../../fonts/League_Gothic-webfont.eot');
+	src: url('../../fonts/League_Gothic-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/1League_Gothic-webfont.woff') format('woff'),
+		url('../../fonts/League_Gothic-webfont.ttf') format('truetype'),
+		url('../../fonts/League_Gothic-webfont.svg#LeagueGothicRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Bold';
+	src: url('proximanova-bold-webfont.eot');
+	src: url('../../fonts/proximanova-bold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/proximanova-bold-webfont.woff') format('woff'),
+		url('../../fonts/proximanova-bold-webfont.ttf') format('truetype'),
+		url('../../fonts/proximanova-bold-webfont.svg#wf') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+/*@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url('../../fonts/1415F2_2.eot');
+  src: url('../../fonts/1415F2_2.eot?#iefix') format('embedded-opentype'), url('../../fonts/1415F2_2.woff') format('woff'), url('../../fonts/1415F2_2.ttf') format('truetype'), url('../../fonts/1415F2_2.svg#wf') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}*/
+@font-face {
+	font-family: 'ProximaNova-Regular';
+	src: url('proximanova-reg-webfont.eot');
+	src: url('../../fonts/proximanova-reg-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/proximanova-reg-webfont.woff') format('woff'),
+		url('../../fonts/proximanova-reg-webfont.ttf') format('truetype'),
+		url('../../fonts/proximanova-reg-webfont.svg#wf') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Light';
+	src: url('../../fonts/proximanova-light-webfont.eot');
+	src: url('../../fonts/proximanova-light-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/proximanova-light-webfont.woff') format('woff'),
+		url('../../fonts/proximanova-light-webfont.ttf') format('truetype'),
+		url('../../fonts/proximanova-light-webfont.svg#wf') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Thin';
+	src: url('../../fonts/proximanova-thin-webfont.eot');
+	src: url('../../fonts/proximanova-thin-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../../fonts/proximanova-thin-webfont.woff') format('woff'),
+		url('../../fonts/proximanova-thin-webfont.ttf') format('truetype'),
+		url('../../fonts/proximanova-thin-webfont.svg#wf') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* get started page Begin*/
+.get-started-page-body {
+	background-color: #222222;
+	color: #555555;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.02em;
+	line-height: 17px;
+	margin: 0;
+}
+
+/* get started page Begin*/
+.get-started-page-body {
+	background-color: #222222;
+	color: #555555;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.02em;
+	line-height: 17px;
+	margin: 0;
+}
+
+.get-started-page-body footer, .get-started-page-body header,
+	.get-started-page-body section {
+	display: block;
+}
+
+.get-started-page-body .page-header {
+	min-width: 980px;
+}
+
+.get-started-page-body .header-main:before, .get-started-page-body .header-main:after
+	{
+	content: "";
+	display: table;
+}
+
+.get-started-page-body .header-main:after {
+	clear: both;
+}
+
+.get-started-page-body .header-main {
+	background-color: #3c3c3c;
+	color: #999999;
+	height: 60px;
+	padding-top: 8px;
+}
+
+.get-started-page-body .container:before, .get-started-page-body .container:after
+	{
+	content: "";
+	display: table;
+}
+
+.get-started-page-body  .container:after {
+	clear: both;
+}
+
+.get-started-page-body .container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 940px;
+	position: relative;
+}
+
+.get-started-page-body .header-main img {
+	border: 0 none;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.get-started-page-body .header-main a {
+	color: #ffffff;
+}
+
+.get-started-page-body a {
+	color: #1b78a8;
+	text-decoration: none;
+	transition: color 0.1s linear 0s, border-bottom 0.1s linear 0s;
+}
+
+.get-started-page-body a, .get-started-page-body a:focus,
+	.get-started-page-body a:hover, .get-started-page-body a:active {
+	outline: 0 none;
+}
+
+.get-started-page-body .content-div {
+	background: url("main-bg-tile.png") repeat
+		scroll 0 0 transparent;
+	min-width: 980px;
+	overflow: hidden;
+}
+
+.get-started-page-body .content-div-inner {
+	min-width: 980px;
+	position: relative;
+}
+
+.get-started-page-body .row:before, .get-started-page-body .row:after {
+	content: "";
+	display: table;
+}
+
+.get-started-page-body .row:after {
+	clear: both;
+}
+
+.get-started-page-body .row {
+	margin-left: -20px;
+}
+
+.get-started-page-body .content-div-inner .main-content-span #divForEn {
+	width: 620px;
+}
+
+.get-started-page-body .content-div-inner [class*="span"] {
+	float: left;
+	margin-left: 20px;
+}
+
+.get-started-page-body .main-content-span .wrap-shadow {
+	box-shadow: 0 0 6px #bbb;
+}
+
+.get-started-page-body .main-content-span .content-wrap {
+	background-color: #fdfdfd;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	padding: 25px 20px;
+}
+
+.get-started-page-body .main-content-span section {
+	margin-bottom: 20px;
+}
+
+.get-started-page-body .main-content-span .clearfix:before,
+	.get-started-page-body .main-content-span .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.get-started-page-body .main-content-span .clearfix:after {
+	clear: both;
+}
+
+.get-started-page-body .main-content-span .lightGray {
+	color: #9a9a9a;
+}
+
+.get-started-page-body #divForEn h1 {
+	color: #f5ba46;
+	font-family: 'LeagueGothicRegular', Impact, Arial, sans-serif;
+	font-size: 36px;
+	line-height: 40px;
+	margin-bottom: 17px;
+	margin-top: 0px;
+	padding: 0;
+	text-transform: uppercase;
+	text-rendering: optimizelegibility;
+	font-weight: 400;
+}
+
+.get-started-page-body #divForEn h2 {
+	clear: both;
+	color: #a1a1a1;
+	font-family: 'ProximaNovaLtSemibold', Arial, sans-serif;
+	font-size: 11px;
+	line-height: 11px;
+	margin-bottom: 25px;
+	text-rendering: optimizelegibility;
+	font-weight: normal;
+}
+
+.get-started-page-body .content-div-inner .main-content-span #divForNonEn
+	{
+	width: 980px;
+}
+
+.get-started-page-body #divForNonEn h1 {
+	font-family: Arial;
+	font-size: 33px;
+	font-weight: normal;
+	margin: 0;
+	color: #000;
+}
+
+.get-started-page-body #divForNonEn .subTitleWithBg {
+	background: url("bannerStripedBG2.jpg")
+		no-repeat scroll left top transparent;
+	color: #000000;
+	font-family: Arial;
+	font-size: 26px;
+	height: 77px;
+	line-height: 70px;
+	margin: 20px 0 10px 0;
+	padding-left: 20px;
+	padding-top: 5px;
+	font-weight: 100;
+}
+
+.get-started-page-body #divForNonEn .subTitle {
+	color: #000;
+	font-family: Arial;
+	font-size: 20px;
+	margin: 30px 0 20px 0;
+	font-weight: 100;
+}
+
+.get-started-page-body .main-content-span .input-div {
+	margin: 0 0 10px;
+	overflow: hidden;
+}
+
+.get-started-page-body .main-content-span label {
+	color: #666666;
+	float: left;
+	font-family: 'ProximaNovaLtSemibold';
+	font-size: 14px;
+	line-height: 19px;
+	margin: 0 15px 0 0;
+	padding-top: 6px;
+	text-align: left;
+	width: 150px;
+	display: block;
+	font-weight: normal;
+}
+
+.get-started-page-body .main-content-span #divForNonEn label {
+	width: 210px;
+}
+
+.get-started-page-body .main-content-span input[type="text"],
+	.get-started-page-body .main-content-span input[type="password"] {
+	float: left;
+	font-family: 'ProximaNovaLtSemibold';
+	font-size: 16px;
+	height: 26px;
+	line-height: 19px;
+	margin: 0;
+	padding: 2px;
+	width: 260px;
+}
+
+.get-started-page-body .main-content-span select {
+	border: 1px solid #bcbaba;
+	border-radius: 1px;
+	font-size: 12px !important;
+	height: 35px;
+	width: 265px;
+	margin-top: 10px;
+}
+
+.get-started-page-body .main-content-span #divForNonEn select {
+	margin-top: 0;
+}
+
+.get-started-page-body .main-content-span .input-div .span-term-of-service
+	{
+	float: left;
+	margin-left: 165px;
+}
+
+.get-started-page-body .main-content-span #divForNonEn .input-div .span-term-of-service
+	{
+	margin-left: 225px;
+}
+
+.get-started-page-body .main-content-span .input-div .label-term-of-service
+	{
+	color: #555555;
+	float: left;
+	font-family: 'ProximaNova-Regular';
+	font-size: 13px;
+	margin-left: 10px;
+	padding: 0;
+	width: 190px;
+}
+
+.get-started-page-body .main-content-span #divForNonEn .input-div .label-term-of-service
+	{
+	width: auto;
+}
+
+.get-started-page-body .main-content-span .submit-button-en {
+	background: transparent url("create-account.png")
+		no-repeat 0 0;
+	border: medium none;
+	height: 34px;
+	margin: 40px 0 0 165px;
+	text-indent: -9999px;
+	width: 183px;
+	cursor: pointer;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.get-started-page-body .main-content-span .submit-button-en:hover {
+	background-position: 0 -34px;
+}
+
+.get-started-page-body .main-content-span .submit-button-en:active {
+	background-position: 0 -67px;
+}
+
+.get-started-page-body .main-content-span .submit-button-en-2 {
+	background: transparent
+		url("submit-btn-sprite.png") no-repeat 0 0;
+	border: medium none;
+	height: 34px;
+	margin: 40px 0 0 165px;
+	text-indent: -9999px;
+	width: 183px;
+	cursor: pointer;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.get-started-page-body .main-content-span .submit-button-en-2:hover {
+	background-position: 0 -34px;
+}
+
+.get-started-page-body .main-content-span .submit-button-en-2:active {
+	background-position: 0 -67px;
+}
+
+.get-started-page-body .main-content-span .submit-button-non-en {
+	background: none repeat scroll 0 0 #f0aa00;
+	border: 1px solid #cc9d1f;
+	border-radius: 1px;
+	box-shadow: 0 0 4px #f8d932 inset;
+	color: #000;
+	font-family: "LeagueGothicRegular", Arial;
+	font-size: 30px;
+	line-height: 38px;
+	margin: 0 0 0 225px;
+	padding: 6px 22px;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #fff;
+}
+
+.get-started-page-body .main-content-span .submit-button-non-en:hover {
+	background: none repeat scroll 0 0 #222222;
+	border: 1px solid #000;
+	box-shadow: 0 0 5px #353535 inset;
+	color: #eea920;
+	text-shadow: none;
+}
+
+.get-started-page-body .main-content-span .privacyrightslinken {
+	margin: 40px 0 0 165px;
+	vertical-align: middle;
+	font-family: 'ProximaNova-Regular';
+	font-size: 12px;
+	color: #257BC7;
+}
+
+.get-started-page-body .main-content-span .privacyrightslinknonen {
+	margin: 0 0 0 225px;
+	font-family: 'ProximaNova-Regular';
+	font-size: 12px;
+	color: #257BC7;
+}
+
+.get-started-page-body input[type="text"], .get-started-page-body input[type="password"]
+	{
+	border: 1px solid #bcbaba;
+	border-radius: 1px;
+	box-shadow: 1px 1px 3px #cccccc inset;
+	padding-left: 15px;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	width: auto;
+	background-color: #ffffff;
+	color: #555555;
+	display: inline-block;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.get-started-page-body select {
+	font-family: font-family: 'Roboto', sans-serif;
+	color: #555555;
+	display: inline-block;
+	font-size: 14px;
+	height: 24px;
+	line-height: 28px;
+	margin-bottom: 9px;
+	padding: 4px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.get-started-page-body input[type="checkbox"] {
+	width: auto;
+	cursor: pointer;
+	line-height: normal;
+	margin: 3px 0;
+	font-family: font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.get-started-page-body .page-footer {
+	background-color: #222222;
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 18px;
+	position: relative;
+	height: 40px;
+}
+
+.get-started-page-body .main-content-span .input-div span.error {
+	clear: both;
+	float: left;
+	font-family: 'ProximaNovaLtSemibold';
+	font-size: 10px;
+	margin-left: 180px;
+	color: red;
+}
+
+.get-started-page-body .main-content-span #divForNonEn .input-div span.error
+	{
+	margin-left: 225px;
+}
+
+.get-started-page-body .main-content-span #divTermsOfService span.error
+	{
+	margin-left: 165px;
+}
+
+.get-started-page-body .loadmask {
+	background-color: #ccc;
+	height: 100%;
+	left: 0;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+/* get started page End*/
