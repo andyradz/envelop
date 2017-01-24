@@ -5,5 +5,5 @@
 *.html
 *.war
 *.ear
-$GIT_DIR/target
-$GIT_DIR/.settings
+target/**/*
+.settings/**/*
