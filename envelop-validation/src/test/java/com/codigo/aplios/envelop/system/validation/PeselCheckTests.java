@@ -17,25 +17,25 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class PeselCheckTests {
-	private static Validator validator;
 
-	// -----------------------------------------------------------------------------------------------------------------
-	
-	@BeforeClass
-	public static void setUp() {
-		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-		validator = factory.getValidator();
-	}
+    // -----------------------------------------------------------------------------------------------------------------
+    private static Validator validator;
 
-	// -----------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @BeforeClass
+    public static void setUp() {
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        validator = factory.getValidator();
+    }
 
-	@Test
-	public void manufacturerIsNull() {
-		final Pesel pesel = new Pesel("02345678903");
-		Set<ConstraintViolation<Pesel>> constraintViolations = validator.validate(pesel);
+    // -----------------------------------------------------------------------------------------------------------------
+    @Test
+    public void manufacturerIsNull() {
+        final Pesel pesel = new Pesel("02345678903");
+        Set<ConstraintViolation<Pesel>> constraintViolations = validator.validate(pesel);
 
-		assertThat(0, is(constraintViolations.size()));
-	}
+        assertThat(0, is(constraintViolations.size()));
+    }
 
-	// -----------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
 }

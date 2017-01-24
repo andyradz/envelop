@@ -13,20 +13,17 @@ import javax.validation.ConstraintValidatorContext;
  */
 public class PeselValidator implements ConstraintValidator<PeselCheck, Pesel> {
 
-	// -----------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @Override
+    public void initialize(PeselCheck constraintAnnotation) {
 
-	@Override
-	public void initialize(PeselCheck constraintAnnotation) {
+    }
 
-	}
+    // -----------------------------------------------------------------------------------------------------------------
+    @Override
+    public boolean isValid(Pesel value, ConstraintValidatorContext context) {
+        return true;
+    }
 
-	// -----------------------------------------------------------------------------------------------------------------
-
-	@Override
-	public boolean isValid(Pesel value, ConstraintValidatorContext context) {
-		return true;
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
-
+    // -----------------------------------------------------------------------------------------------------------------
 }

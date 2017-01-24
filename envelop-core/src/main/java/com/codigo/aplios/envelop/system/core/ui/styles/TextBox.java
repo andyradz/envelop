@@ -15,59 +15,59 @@ import javax.swing.SwingUtilities;
 
 public class TextBox extends JTextField {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5833753981845624907L;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 5833753981845624907L;
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SwingUtilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() {
 
-			@Override
-			public void run() {
+            @Override
+            public void run() {
 
-				createUI();
-			}
-		});
-	}
+                createUI();
+            }
+        });
+    }
 
-	private static void createUI() {
+    private static void createUI() {
 
-		JFrame frmMain = new JFrame("Test placeholder");
-		frmMain.setBounds(new Rectangle(800, 600));
-		frmMain.setLayout(new FlowLayout());
+        JFrame frmMain = new JFrame("Test placeholder");
+        frmMain.setBounds(new Rectangle(800, 600));
+        frmMain.setLayout(new FlowLayout());
 
-		TextBox txtBox = new TextBox("Nazwa kontrahenta");
-		txtBox.setPreferredSize(new Dimension(550, 25));
-		txtBox.setBorder(BorderFactory.createLineBorder(Color.gray));
-		frmMain.add(txtBox);
+        TextBox txtBox = new TextBox("Nazwa kontrahenta");
+        txtBox.setPreferredSize(new Dimension(550, 25));
+        txtBox.setBorder(BorderFactory.createLineBorder(Color.gray));
+        frmMain.add(txtBox);
 
-		frmMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmMain.setVisible(true);
-	}
+        frmMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmMain.setVisible(true);
+    }
 
-	private String placeholder;
+    private String placeholder;
 
-	public TextBox(String placeholder) {
-		this.placeholder = placeholder;
-	}
+    public TextBox(String placeholder) {
+        this.placeholder = placeholder;
+    }
 
-	@Override
-	protected void paintComponent(java.awt.Graphics g) {
+    @Override
+    protected void paintComponent(java.awt.Graphics g) {
 
-		super.paintComponent(g);
+        super.paintComponent(g);
 
-		if (placeholder.length() == 0 || !getText().isEmpty())
-			return;
+        if (placeholder.length() == 0 || !getText().isEmpty()) {
+            return;
+        }
 
-		// FocusManager.getCurrentKeyboardFocusManager()
-
-		final Graphics2D gp = (Graphics2D) g;
-		gp.setFont(getFont().deriveFont(Font.ITALIC));
-		gp.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		gp.setColor(getDisabledTextColor());
-		gp.drawString(placeholder, getInsets().left, g.getFontMetrics()
-				.getHeight() + getInsets().top);
-	}
+        // FocusManager.getCurrentKeyboardFocusManager()
+        final Graphics2D gp = (Graphics2D) g;
+        gp.setFont(getFont().deriveFont(Font.ITALIC));
+        gp.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        gp.setColor(getDisabledTextColor());
+        gp.drawString(placeholder, getInsets().left, g.getFontMetrics()
+                .getHeight() + getInsets().top);
+    }
 }

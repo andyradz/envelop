@@ -1,1 +1,16 @@
-/META-INF/
+# compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# packages #	
+############
+*.is
+*.jar
+*.tar
+*.zip
+ 

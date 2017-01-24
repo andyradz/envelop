@@ -1,0 +1,9 @@
+*.jar
+*.class
+*.xml
+*.htm
+*.html
+*.war
+*.ear
+$GIT_DIR/target
+$GIT_DIR/.settings
