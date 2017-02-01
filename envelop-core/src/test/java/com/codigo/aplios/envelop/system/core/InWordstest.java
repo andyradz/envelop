@@ -137,16 +137,26 @@ class InWordstest {
 // */
 final class WordsOfMoneyPart {
 
+    /**
+     * @see WordsOfMoneyPart#getUnits()
+     */
+    private final int units;
 
-    private final int jednostki;
+    /**
+     * @see WordsOfMoneyPart#getTeens()
+     */
+    private final int teens;
 
-    private final int nastki;
+    /**
+     * @see WordsOfMoneyPart#getTens()
+     */
+    private final int tens;
 
-    private final int dzisiatki;
+    /**
+     * @see WordsOfMoneyPart#getHunds()
+     */
+    private final int hunds;
 
-    private final int setki;
-
-    //------------------------------------------------------------------------------------------------------------------
     /**
      * Podstawowy konstruktor obiektu klasy.
      */
@@ -155,21 +165,56 @@ final class WordsOfMoneyPart {
         this(0, 0, 0, 0);
     }
 
-    //------------------------------------------------------------------------------------------------------------------
     /**
-     * Podstawowy konstruktor obiektu klasy.
+     * <p style="color:white;background:teal;padding:4px;">
+     * Podstawowy konstruktor obiektu klasy</p>
      *
-     * @param units
-     * @param teens
-     * @param tens
-     * @param hundreds
+     * @param units Ilość jedności w wartości liczby
+     * @param teens Ilość nastek w wartości liczby
+     * @param tens Ilość dziesiątek w wartości liczby
+     * @param hunds Ilość setek w wartości liczby
      */
-    private WordsOfMoneyPart(int units, int teens, int tens, int hundreds) {
-        this.jednostki = units;
-        this.nastki = teens;
-        this.dzisiatki = tens;
-        this.setki = hundreds;
+    private WordsOfMoneyPart(int units, int teens, int tens, int hunds) {
+        this.units = units;
+        this.teens = teens;
+        this.tens = tens;
+        this.hunds = hunds;
     }
 
-    //------------------------------------------------------------------------------------------------------------------
+    /**
+     * Właściwość określa liczbę jedności w wartości liczby
+     *
+     * @return Wartość numeryczna liczby całkowita
+     */
+    public int getUnits() {
+        return this.units;
+    }
+
+    /**
+     * Właściwość określa liczbę nastek w wartości liczby
+     *
+     * @return Wartość numeryczna liczby całkowita
+     */
+    public int getTeens() {
+        return this.teens;
+    }
+
+    /**
+     * Właściwość określa liczbę dziesiątek w wartości liczby
+     *
+     * @return Wartość numeryczna liczby całkowita
+     */
+    public int getTens() {
+        return this.tens;
+    }
+
+    /**
+     * Właściwość określa liczbę setek w wartości liczby
+     *
+     * @return Wartość numeryczna liczby całkowita
+     */
+    public int getHunds() {
+        return this.hunds;
+    }
+
 }
