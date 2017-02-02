@@ -1,3 +1,5 @@
+package com.codigo.aplios.envelop.system.core;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -96,7 +98,8 @@ public final class MyPanel extends JPanel {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+		}
+		catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 				| UnsupportedLookAndFeelException ex) {
 			ex.printStackTrace();
 		}

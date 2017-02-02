@@ -25,7 +25,7 @@ interface MoneyInWords {
  */
 class InWordstest {
 
-    public enum MoneyInWords {
+	public enum MoneyInWords {
 
         MONEY_IN_PLN("PLN") {
 

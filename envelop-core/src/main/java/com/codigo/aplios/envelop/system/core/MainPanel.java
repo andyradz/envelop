@@ -1,3 +1,5 @@
+package com.codigo.aplios.envelop.system.core;
+
 import java.awt.AWTException;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -21,7 +23,6 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
 //aterai/java-swing-tips
-
 
 public final class MainPanel extends JPanel {
 	private final JDialog dialog = new JDialog();
@@ -47,7 +48,8 @@ public final class MainPanel extends JPanel {
 		dialog.setLocationRelativeTo(null);
 		dialog.setTitle("TEST: JDialog");
 
-		// TEST: icon = new TrayIcon(new ImageIcon(getClass().getResource("anime.gif")).getImage(),
+		// TEST: icon = new TrayIcon(new
+		// ImageIcon(getClass().getResource("anime.gif")).getImage(),
 		// "TRAY", popup);
 		icon = new TrayIcon(imglist[0], "TRAY", makeTrayPopupMenu());
 		animator = new Timer(100, new ActionListener() {
@@ -62,7 +64,8 @@ public final class MainPanel extends JPanel {
 		});
 		try {
 			SystemTray.getSystemTray().add(icon);
-		} catch (AWTException ex) {
+		}
+		catch (AWTException ex) {
 			ex.printStackTrace();
 		}
 	}
@@ -128,7 +131,8 @@ public final class MainPanel extends JPanel {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+		}
+		catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 				| UnsupportedLookAndFeelException ex) {
 			ex.printStackTrace();
 		}

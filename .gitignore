@@ -5,5 +5,11 @@
 *.html
 *.war
 *.ear
-target/**/*
-.settings/**/*
+.gitignore
+target/**
+.settings/
+/envelop-core/target/
+/envelop-core/.gitignore
+/envlop-exchange/target/
+/envelop-ui/target/
+/envelop-validation/target/
