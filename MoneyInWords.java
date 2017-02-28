@@ -4,27 +4,32 @@ public enum MoneyInWords
 {
 	MONEY_IN_PLN,
 	MONEY_IN_EUR;
-	
+
 	public static void main(String[] args) {
 
-		System.out.println(MoneyPart
-				.builder(3).assignUnitCount(5).assignTeenCount(5).assignHundCount(7).assignTenCount(1).build()
-				.toString());
+		System.out.println(
+				MoneyPart
+						.builder(3)
+						.assignUnitCount(5)
+						.assignTeenCount(5)
+						.assignHundCount(7)
+						.assignTenCount(1)
+						.build()
+						.toString());
 
-		System.out.println(MoneyPart
-				.builder(0).assignHundCount(7).assignTenCount(0).build()
-				.toString());
-		
-		System.out.println(MoneyPart
-				.builder(12).build()
-				.toString());
+		System.out.println(MoneyPart.builder(0).assignHundCount(7).assignTenCount(0).build().toString());
+
+		System.out.println(MoneyPart.builder(12).build().toString());
 	}
-	
+
 }
 
 /**
+ * <pre style='color:orange;font-family:Arial;font-size:1.3em;'>
  * @author andrzej.radziszewski
- *
+ * Store file : MoneyInWords.java
+ * Create date: 16.02.2017
+ * </pre>
  */
 final class MoneyPart {
 	private int sector;
@@ -46,12 +51,14 @@ final class MoneyPart {
 	/**
 	 * <p style=
 	 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:
-	 * solid;font-size:1.1em'>
+	 * solid;font-size:1.2em'>
 	 * Podstawowy konstruktor obiektu klasy
 	 * </p>
 	 * 
+	 * <pre style='color:silver;font-size:1.3em'>
 	 * @param partBuilder
-	 *        Budowniczy struktury przechowującej sektory liczby.
+	 * Budowniczy struktury przechowującej sektory liczby.
+	 * </pre>
 	 */
 	public MoneyPart(MoneyPartBuilder partBuilder) {
 		this.sector = partBuilder.sector;
@@ -145,7 +152,8 @@ final class MoneyPart {
 	 * <p style=
 	 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:
 	 * solid;font-size:1.1em'>
-	 * Klasa realizuje mechanizm przechowywania wartości ilości jednostek danego sektora liczby<br>
+	 * Klasa realizuje mechanizm przechowywania wartości ilości jednostek danego
+	 * sektora liczby<br>
 	 * Store file : Slownie.java</br>
 	 * Create date: 24.01.2017
 	 * </p>
@@ -216,24 +224,27 @@ final class MoneyPart {
 		 * <p style=
 		 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:
 		 * solid;'>
-		 * Metoda weryfikuje wartość ilości jednostek przypisywanych do danego sektora liczby.</br>
-		 * Wykonywana jest walidacja czy przypisywana wartość jest z zakresu [0-9].
+		 * Metoda weryfikuje wartość ilości jednostek przypisywanych do danego
+		 * sektora liczby.</br>
+		 * Wykonywana jest walidacja czy przypisywana wartość jest z zakresu
+		 * [0-9].
 		 * </p>
 		 * 
 		 * @param assignValue
-		 *        Wartość ilości przypisywanej do sektora liczby.
+		 * Wartość ilości przypisywanej do sektora liczby.
 		 * @throws IllegalArgumentException
-		 *         <p style=
-		 *         'color:red;background:rgba(255,230,230,0.9);padding:12px;border-radius:4px;'>
-		 *         Wyjątek powstaje w przypadku gdy wartości <code>assignValue</code> jest
-		 *         poza zakresem dozwolonych wartości [0-9]
-		 *         </p>
+		 * <p style=
+		 * 'color:red;background:rgba(255,230,230,0.9);padding:12px;border-radius:4px;'>
+		 * Wyjątek powstaje w przypadku gdy wartości <code>assignValue</code>
+		 * jest poza zakresem dozwolonych wartości [0-9]
+		 * </p>
 		 */
 		private void checkAssignValue(int assignValue) {
 
 			if ((assignValue < 0) || (assignValue > 9))
-				throw new IllegalArgumentException("\nBłędna wartość parametru {assignValue}."
-						+ " \nDozwolone wartości to liczby z zakresu [0-9]");
+				throw new IllegalArgumentException(
+						"\nBłędna wartość parametru {assignValue}."
+								+ " \nDozwolone wartości to liczby z zakresu [0-9]");
 		}
 
 		// -------------------------------------------------------------------------------------------------------------
@@ -246,8 +257,8 @@ final class MoneyPart {
 		 * </p>
 		 * 
 		 * @param sector
-		 *        Numer sektora w liczbie. Numer sektora należy rozumieć jako kolejny tysięczny blok
-		 *        składowy liczby.
+		 * Numer sektora w liczbie. Numer sektora należy rozumieć jako kolejny
+		 * tysięczny blok składowy liczby.
 		 */
 		private MoneyPartBuilder(int sector) {
 			this.sector = sector;
@@ -259,12 +270,12 @@ final class MoneyPart {
 		 * <p style=
 		 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:
 		 * solid;'>
-		 * Właściwość ustawia atrybut <code>this.unitCount</code> określający ilość jednostek w
-		 * danym sektorze liczby.
+		 * Właściwość ustawia atrybut <code>this.unitCount</code> określający
+		 * ilość jednostek w danym sektorze liczby.
 		 * </p>
 		 * 
 		 * @param count
-		 *        Ilość jednostek w danym sektorze liczby.
+		 * Ilość jednostek w danym sektorze liczby.
 		 * @return Obiekt typu <code>WordsMoneyPartBuilder</code>.
 		 */
 		public MoneyPartBuilder assignUnitCount(int count) {
@@ -280,13 +291,12 @@ final class MoneyPart {
 		 * <p style=
 		 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:
 		 * solid;'>
-		 * Właściwość ustawia atrybut <code>this.teenCount</code> określający ilość nastek w
-		 * danym sektorze liczby.
+		 * Właściwość ustawia atrybut <code>this.teenCount</code> określający
+		 * ilość nastek w danym sektorze liczby.
 		 * </p>
 		 * 
 		 * @param count
-		 *        :
-		 *        Ilość nastek w danym sektorze liczby.
+		 * : Ilość nastek w danym sektorze liczby.
 		 * @return Obiekt typu <code>WordsMoneyPartBuilder</code>.
 		 */
 		public MoneyPartBuilder assignTeenCount(int count) {
@@ -302,12 +312,12 @@ final class MoneyPart {
 		 * <p style=
 		 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:
 		 * solid;'>
-		 * Właściwość ustawia atrybut <code>this.tenCount</code> określający ilość dziesiątek w
-		 * danym sektorze liczby.
+		 * Właściwość ustawia atrybut <code>this.tenCount</code> określający
+		 * ilość dziesiątek w danym sektorze liczby.
 		 * </p>
 		 * 
 		 * @param count
-		 *        Ilość dziesiątek w danym sektorze liczby.
+		 * Ilość dziesiątek w danym sektorze liczby.
 		 * @return Obiekt typu <code>WordsMoneyPartBuilder</code>.
 		 */
 		public MoneyPartBuilder assignTenCount(int count) {
@@ -322,12 +332,12 @@ final class MoneyPart {
 		/**
 		 * <p style=
 		 * 'color:white;background:rgba(1,113,113,0.5);padding:12px;border-radius:4px;border-style:solid;'>
-		 * Właściwość ustawia atrybut <code>this.hundCount</code> określający ilość setek w danym
-		 * sektorze liczby.
+		 * Właściwość ustawia atrybut <code>this.hundCount</code> określający
+		 * ilość setek w danym sektorze liczby.
 		 * </p>
 		 * 
 		 * @param count
-		 *        Ilość setek w danym sektorze liczby.
+		 * Ilość setek w danym sektorze liczby.
 		 * @return Obiekt typu <code>WordsMoneyPartBuilder</code>.
 		 */
 		public MoneyPartBuilder assignHundCount(int count) {
@@ -350,56 +360,49 @@ class MoneyInWordsL {
 
 	public static void main(String[] args) {
 
-		System.out.println(MoneyPart
-				.builder(1).assignUnitCount(5).assignTeenCount(5).assignHundCount(7).assignTenCount(1).build()
-				.toString());
-
+		System.out.println(
+				MoneyPart
+						.builder(1)
+						.assignUnitCount(5)
+						.assignTeenCount(5)
+						.assignHundCount(7)
+						.assignTenCount(1)
+						.build()
+						.toString());
 
 		/*
 		 * for (int idx = 1; idx < 999; idx++) {
 		 * 
-		 * final Consumer<Integer> jednostki = (value) -> {
-		 * final int val = ((1 == (value) / 10 % 10) ? 1 : (((value) * 10) % 100) / 10);
-		 * if (0 != val)
-		 * System.out.print(String.format(" jednostki:%d ", val));
-		 * };
+		 * final Consumer<Integer> jednostki = (value) -> { final int val = ((1
+		 * == (value) / 10 % 10) ? 1 : (((value) * 10) % 100) / 10); if (0 !=
+		 * val) System.out.print(String.format(" jednostki:%d ", val)); };
 		 * 
-		 * // TODO: poprawić dzisiątkę
-		 * final Consumer<Integer> dziesiatki = (value) -> {
-		 * // final int val = ((0 == (value % 100)) ? (value / 10) : (1== ((value * 10) % 100)
-		 * // / 10) ? -1 : (value / 10) % 100);
-		 * final int val =
-		 * ((0 == (value % 100))
-		 * ? (value % 100) : (1 == ((value * 10) % 100) / 10) ? ((value / 10) % 100) : 0);
-		 * if (0 < val)
-		 * System.out.print(String.format(" dziesiątki:%d ", (value / 10) % 10));
-		 * };
+		 * // TODO: poprawić dzisiątkę final Consumer<Integer> dziesiatki =
+		 * (value) -> { // final int val = ((0 == (value % 100)) ? (value / 10)
+		 * : (1== ((value * 10) % 100) // / 10) ? -1 : (value / 10) % 100);
+		 * final int val = ((0 == (value % 100)) ? (value % 100) : (1 == ((value
+		 * * 10) % 100) / 10) ? ((value / 10) % 100) : 0); if (0 < val)
+		 * System.out.print(String.format(" dziesiątki:%d ", (value / 10) %
+		 * 10)); };
 		 * 
-		 * final Consumer<Integer> nastki = (value) -> {
-		 * final int val = ((0 == (value % 10)) ? 0 : (value % 100) / 10);
-		 * if (1 == val)
-		 * System.out.print(String.format(" nastki:%d ", value % 10));
-		 * };
+		 * final Consumer<Integer> nastki = (value) -> { final int val = ((0 ==
+		 * (value % 10)) ? 0 : (value % 100) / 10); if (1 == val)
+		 * System.out.print(String.format(" nastki:%d ", value % 10)); };
 		 * 
-		 * final Consumer<Integer> setki = (value) -> {
-		 * final int val = value / 100;
-		 * if (0 != val)
-		 * System.out.print(String.format(" setki:%d ", (value / 100)));
-		 * };
+		 * final Consumer<Integer> setki = (value) -> { final int val = value /
+		 * 100; if (0 != val) System.out.print(String.format(" setki:%d ",
+		 * (value / 100))); };
 		 * 
 		 * System.out.println(String.format("wartość:%d", idx));
 		 * System.out.print("{");
 		 * 
 		 * Consumer<Integer> inwords =
-		 * setki.andThen(dziesiatki).andThen(nastki).andThen(jednostki).andThen((e) -> {
-		 * }).andThen((e) -> {
-		 * });
+		 * setki.andThen(dziesiatki).andThen(nastki).andThen(jednostki).andThen(
+		 * (e) -> { }).andThen((e) -> { });
 		 * 
 		 * inwords.accept(idx);
 		 * 
-		 * System.out.print("}");
-		 * System.out.println(" ");
-		 * }
+		 * System.out.print("}"); System.out.println(" "); }
 		 */
 	}
 }
