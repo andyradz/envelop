@@ -6,7 +6,7 @@ import java.util.Comparator;
 /**
  * Klasa bazowa dla klas realizujących specyficzne mechanizmy sortujące kolekcje
  * danych.
- * 
+ *
  * @author andrzej.radziszewski
  *
  * @param <T>
@@ -14,20 +14,17 @@ import java.util.Comparator;
  */
 abstract class AbstractSort<T> implements ISortingStrategy<T> {
 
-	// -----------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    public AbstractSort( Comparator<T> comparer ) {
+        this.comparer = comparer;
+    }
 
-	public AbstractSort(Comparator<T> comparer) {
-		this.comparer = comparer;
-	}
+    // -----------------------------------------------------------------------------------------------------------------
+    @Override
+    abstract public void sort( Collection<T> data );
 
-	// -----------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    protected Comparator<T> comparer;
 
-	@Override
-	abstract public void sort(Collection<T> data);
-
-	// -----------------------------------------------------------------------------------------------------------------
-
-	protected Comparator<T> comparer;
-
-	// -----------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
 }

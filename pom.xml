@@ -16,8 +16,17 @@
         <module>envelop-exchange</module>
         <module>envelop-ui</module>
         <module>envelop-validation</module>
-        <module>envelop-toolbox</module>
+        <module>envelop-explorer</module>
     </modules>
+    <build>
+        <plugins>
+            <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jarsigner-plugin</artifactId> 
+            <version>1.4</version> <executions> <execution> <id>sign</id> <goals> <goal>sign</goal> 
+            </goals> </execution> </executions> <configuration> <keystore>/path/to/the/keystore</keystore> 
+            <alias>Alias name</alias> <storepass>Store password</storepass> <keypass>Key 
+            password</keypass> </configuration> </plugin> -->
+        </plugins>
+    </build>
     <dependencyManagement>
     </dependencyManagement>
     <reporting>
